@@ -1,0 +1,41 @@
+@layer theme {
+  :root {
+    --primary: #171f84; /* Custom Blue */
+    --secondary: #f6f3ee; /* Custom Yellow */
+    --accent: #f8f8f8; /* Custom Gray */
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .text-secondary {
+    color: var(--secondary);
+  }
+
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .bg-accent {
+    background-color: var(--accent);
+  }
+
+}
+
+.hero-btn, .hero-dot {
+  pointer-events: auto;
+  z-index: 100;
+}
+
+.hero-slide {
+  z-index: 10;
+}
