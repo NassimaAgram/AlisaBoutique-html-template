@@ -19,7 +19,7 @@
     <meta name="twitter:image" content="./assets/images/Logo.png">
 
      <!-- Tailwind CSS -->
-     <link rel="stylesheet" href="./styles/output.css" rel="preload">
+     <link href="./styles/output.css" rel="stylesheet" >
      <link rel="stylesheet" href="./styles/custom.css">
 
     <!-- SEO and Languages-->
@@ -31,6 +31,7 @@
     <!-- Preloading fonts and critical assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="./assets/images/Logo.png" as="image">
+    <link rel="preload" href="./assets/images/Logo-footer.webp" as="image">
     <link rel="preload" href="./assets/images/Logo-footer.jpg" as="image">
     <link rel="preload" href="https://dummyimage.com/600x400/dbdbdb/fff&text=DummyImg+sm+1" as="image">
 
@@ -760,7 +761,12 @@
             <div class="grid md:justify-between grid-cols-1 gap-4 md:grid-cols-2 ">
                 <div class="dark:text-gray-500">
                     <div class="md:flex md:flex-col md:justify-start justify-center">
-                        <img loading="lazy" src="./assets/images/Logo-footer.jpg" alt="" class="md:h-[130px] h-auto md:w-auto w-[200px] md:ml-10 mx-auto rounded-full md:text-left text-center items-center" width="250" height="250">
+                        <picture class="relative w-full h-full">
+                            <!-- WebP format -->
+                            <source type="image/webp" srcset="./assets/images/Logo-footer.webp" width="250" height="250">
+                            <!-- Fallback to JPEG if WebP is not supported -->
+                            <img loading="lazy" src="./assets/images/Logo-footer.jpg" alt="" class="md:h-[130px] h-auto md:w-auto w-[200px] md:ml-10 mx-auto rounded-full md:text-left text-center items-center" width="250" height="250">
+                        </picture>
                         <p class="px-6 mt-4 text-sm sm:text-base md:text-left text-center">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis in debitis non quia soluta eius ad illo odit obcaecati amet minima.
                         </p>
