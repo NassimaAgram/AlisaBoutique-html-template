@@ -1,3 +1,6 @@
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer theme {
   :root {
     --primary: #171f84; /* Custom Blue */
