@@ -836,6 +836,9 @@
   .-ml-14 {
     margin-left: calc(var(--spacing) * -14);
   }
+  .ml-3 {
+    margin-left: calc(var(--spacing) * 3);
+  }
   .ml-6 {
     margin-left: calc(var(--spacing) * 6);
   }
@@ -1905,6 +1908,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .bg-yellow-200 {
+    background-color: var(--color-yellow-200);
+  }
   .-bg-conic {
     --tw-gradient-position: in oklab;
     background-image: conic-gradient(var(--tw-gradient-stops));
@@ -2037,6 +2043,15 @@
   }
   .fill-none {
     fill: none;
+  }
+  .fill-slate-300 {
+    fill: var(--color-slate-300);
+  }
+  .fill-slate-400 {
+    fill: var(--color-slate-400);
+  }
+  .fill-slate-500 {
+    fill: var(--color-slate-500);
   }
   .stroke-none {
     stroke: none;
@@ -3264,6 +3279,16 @@
   .lg\:pl-10 {
     @media (width >= 64rem) {
       padding-left: calc(var(--spacing) * 10);
+    }
+  }
+  .dark\:block {
+    &:where(.dark, .dark *) {
+      display: block;
+    }
+  }
+  .dark\:hidden {
+    &:where(.dark, .dark *) {
+      display: none;
     }
   }
   .dark\:rounded-full {

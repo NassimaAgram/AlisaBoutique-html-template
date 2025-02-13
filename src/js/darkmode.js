@@ -1,5 +1,3 @@
-// Dark Mode Toggle 
-
 document.addEventListener("DOMContentLoaded", function () {
     const darkToggle = document.getElementById("dark-toggle");
 
