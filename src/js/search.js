@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchBtn.addEventListener("click", () => {
         if (searchInput.classList.contains("w-40")) {
+            searchInput.classList.remove("hidden")
             searchInput.classList.remove("w-40", "opacity-100");
             searchInput.classList.add("w-0", "opacity-0");
         } else {

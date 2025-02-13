@@ -19,7 +19,7 @@
     <meta name="twitter:image" content="./assets/images/Logo.png">
 
     <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="./styles/output.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./styles/output.css" rel="preload">
     <link rel="stylesheet" href="./styles/custom.css">
 
     <!-- SEO and Languages-->
@@ -83,7 +83,7 @@
                         </svg>
                     </button>
                     <input id="search-input" type="text" placeholder="Search..." 
-                        class="py-2 px-3 rounded-full text-black border border-gray-300 w-0 opacity-0 transition-all duration-300 ease-in-out focus:w-40 focus:opacity-100">
+                        class="py-2 px-3 hidden rounded-full text-black border border-gray-300 w-0 opacity-0 transition-all duration-300 ease-in-out focus:w-40 focus:opacity-100">
                 </div>
 
                 <!-- Contact Info -->
@@ -236,7 +236,7 @@
                             <picture class="absolute top-0 left-0 w-full h-full z-10"> 
                                 <source type="image/webp" media="(min-width: 1024px)" srcset="https://dummyimage.com/1200x800/dbdbdb/fff&text=DummyImg+lg+1">
                                 <source type="image/webp" media="(min-width: 768px)" srcset="https://dummyimage.com/800x533/dbdbdb/fff&text=DummyImg+md+1">
-                                <img src="https://dummyimage.com/600x400/dbdbdb/fff&text=DummyImg+sm+1" alt="Slide 1" class="w-full h-full object-cover"  loading="lazy">
+                                <img src="https://dummyimage.com/600x400/dbdbdb/fff&text=DummyImg+sm+1" alt="Slide 1" class="w-full h-full object-cover" width="600" height="400">
                             </picture>
                             <!-- Text Content -->
                             <div class="relative z-20 flex flex-col items-start justify-center text-left px-10 md:px-16 h-full">
@@ -254,7 +254,7 @@
                             <picture class="absolute top-0 left-0 w-full h-full z-10">
                                 <source type="image/webp" media="(min-width: 1024px)" srcset="https://dummyimage.com/1200x800/cccccc/fff&text=DummyImg+lg+2">
                                 <source type="image/webp" media="(min-width: 768px)" srcset="https://dummyimage.com/800x533/cccccc/fff&text=DummyImg+md+2">
-                                <img src="https://dummyimage.com/600x400/cccccc/fff&text=DummyImg+sm+2" alt="Slide 2" class="w-full h-full object-cover"  loading="lazy">
+                                <img src="https://dummyimage.com/600x400/cccccc/fff&text=DummyImg+sm+2" alt="Slide 2" class="w-full h-full object-cover"  loading="lazy" width="600" height="400">
                             </picture>
                             <!-- Text Content -->
                             <div class="relative z-20 flex flex-col items-start justify-center text-left px-10 md:px-16 h-full">
@@ -272,7 +272,7 @@
                             <picture class="absolute top-0 left-0 w-full h-full z-10">
                                 <source type="image/webp" media="(min-width: 1024px)" srcset="https://dummyimage.com/1200x800/c4c4c4/fff&text=DummyImg+lg+3">
                                 <source type="image/webp" media="(min-width: 768px)" srcset="https://dummyimage.com/800x533/c4c4c4/fff&text=DummyImg+md+3">
-                                <img src="https://dummyimage.com/600x400/c4c4c4/fff&text=DummyImg+sm+3" alt="Slide 3" class="w-full h-full object-cover"  loading="lazy">
+                                <img src="https://dummyimage.com/600x400/c4c4c4/fff&text=DummyImg+sm+3" alt="Slide 3" class="w-full h-full object-cover"  loading="lazy" width="600" height="400">
                             </picture>
                             <!-- Text Content -->
                             <div class="relative z-20 flex flex-col items-start justify-center text-left px-10 md:px-16 h-full">
