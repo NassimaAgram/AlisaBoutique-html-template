@@ -19,7 +19,7 @@
     <meta name="twitter:image" content="./assets/images/Logo.png">
 
     <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="./styles/output.css">
+    <link rel="stylesheet" href="./styles/output.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./styles/custom.css">
 
     <!-- SEO and Languages-->
@@ -31,7 +31,7 @@
     <!-- Preloading fonts and critical assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="./assets/images/Logo.png" as="image">
-    <link rel="preload" href="./assets/images/Logo-Dark.jpg" as="image">
+    <link rel="preload" href="./assets/images/Logo-footer.jpg" as="image">
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/images/favicon.png" type="image/png">
@@ -236,7 +236,7 @@
                             <picture class="absolute top-0 left-0 w-full h-full z-10"> 
                                 <source type="image/webp" media="(min-width: 1024px)" srcset="https://dummyimage.com/1200x800/dbdbdb/fff&text=DummyImg+lg+1">
                                 <source type="image/webp" media="(min-width: 768px)" srcset="https://dummyimage.com/800x533/dbdbdb/fff&text=DummyImg+md+1">
-                                <img src="https://dummyimage.com/600x400/dbdbdb/fff&text=DummyImg+sm+1" alt="Slide 1" class="w-full h-full object-cover">
+                                <img src="https://dummyimage.com/600x400/dbdbdb/fff&text=DummyImg+sm+1" alt="Slide 1" class="w-full h-full object-cover"  loading="lazy">
                             </picture>
                             <!-- Text Content -->
                             <div class="relative z-20 flex flex-col items-start justify-center text-left px-10 md:px-16 h-full">
@@ -254,7 +254,7 @@
                             <picture class="absolute top-0 left-0 w-full h-full z-10">
                                 <source type="image/webp" media="(min-width: 1024px)" srcset="https://dummyimage.com/1200x800/cccccc/fff&text=DummyImg+lg+2">
                                 <source type="image/webp" media="(min-width: 768px)" srcset="https://dummyimage.com/800x533/cccccc/fff&text=DummyImg+md+2">
-                                <img src="https://dummyimage.com/600x400/cccccc/fff&text=DummyImg+sm+2" alt="Slide 2" class="w-full h-full object-cover">
+                                <img src="https://dummyimage.com/600x400/cccccc/fff&text=DummyImg+sm+2" alt="Slide 2" class="w-full h-full object-cover"  loading="lazy">
                             </picture>
                             <!-- Text Content -->
                             <div class="relative z-20 flex flex-col items-start justify-center text-left px-10 md:px-16 h-full">
@@ -272,7 +272,7 @@
                             <picture class="absolute top-0 left-0 w-full h-full z-10">
                                 <source type="image/webp" media="(min-width: 1024px)" srcset="https://dummyimage.com/1200x800/c4c4c4/fff&text=DummyImg+lg+3">
                                 <source type="image/webp" media="(min-width: 768px)" srcset="https://dummyimage.com/800x533/c4c4c4/fff&text=DummyImg+md+3">
-                                <img src="https://dummyimage.com/600x400/c4c4c4/fff&text=DummyImg+sm+3" alt="Slide 3" class="w-full h-full object-cover">
+                                <img src="https://dummyimage.com/600x400/c4c4c4/fff&text=DummyImg+sm+3" alt="Slide 3" class="w-full h-full object-cover"  loading="lazy">
                             </picture>
                             <!-- Text Content -->
                             <div class="relative z-20 flex flex-col items-start justify-center text-left px-10 md:px-16 h-full">
@@ -744,7 +744,7 @@
             <div class="grid md:justify-between grid-cols-1 gap-4 md:grid-cols-2 ">
                 <div class="dark:text-gray-500">
                     <div class="md:flex md:flex-col md:justify-end justify-center">
-                        <img loading="lazy" src="./assets/images/Logo-Dark.jpg" alt="" class="md:h-30 h-auto md:w-auto w-70 md:mr-10 mx-auto rounded-full md:text-right text-center items-center" width="250" height="250">
+                        <img loading="lazy" src="./assets/images/Logo-footer.jpg" alt="" class="md:h-[130px] h-auto md:w-auto w-[200px] md:mr-10 mx-auto rounded-full md:text-right text-center items-center" width="250" height="250">
                         <p class="px-6 mt-4 text-sm sm:text-base md:text-right text-center">
                             لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسيسينغ إليت. ألياس بلاندتييس في ديبيتييس نون كيا سولوتا إيوس أد إيلو أوديتي أوبكاكاتي أميت مينيما.
                         </p>
