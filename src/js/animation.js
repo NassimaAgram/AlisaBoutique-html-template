@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, {
-        threshold: 0.5 
+        threshold: 0.3 
     });
 
     // Observe each element

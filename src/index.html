@@ -12,7 +12,7 @@
     <meta property="og:title" content="ProSite - Home">
     <meta property="og:description" content="Create and manage your professional site easily.">
     <meta property="og:image" content="/assets/images/Logo.png">
-    <meta property="og:url" content="http://127.0.0.1:5500/src/en/index.html">
+    <meta property="og:url" content="https://alisa-boutique-html-template.vercel.app/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@nassima">
     <meta name="twitter:title" content="ProSite - Home">
@@ -25,9 +25,9 @@
 
     <!-- SEO and Languages-->
     <meta name="robots" content="index, follow">
-    <link rel="alternate" href="http://127.0.0.1:5500/src/en/index.html" hreflang="en" />
-    <link rel="alternate" href="http://127.0.0.1:5500/src/ar/index.html" hreflang="ar" />
-    <link rel="canonical" href="http://127.0.0.1:5500/src/index.html">
+    <link rel="alternate" href="https://alisa-boutique-html-template.vercel.app/" hreflang="en" />
+    <link rel="alternate" href="https://alisa-boutique-html-template.vercel.app/" hreflang="ar" />
+    <link rel="canonical" href="https://alisa-boutique-html-template.vercel.app/">
     
     <!-- Preloading fonts and critical assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -173,14 +173,15 @@
                     <div class="flex items-center space-x-6 py-4">
                         <!-- Navigation Links -->
                         <ul class="hidden lg:flex lg:gap-x-12">
-                            <li><a href="#about" class="text-base font-semibold text-blue-900 hover:text-white cursor-pointer" data-translate="navbar.about">About</a></li>
-                            <li><a href="#features" class="text-base font-semibold text-blue-900 hover:text-white cursor-pointer" data-translate="navbar.features">Features</a></li>
-                            <li><a href="#testimonials" class="text-base font-semibold text-blue-900 hover:text-white cursor-pointer" data-translate="navbar.testimonials">Testimonials</a></li>
-                            <li><a href="#contact" class="text-base font-semibold text-blue-900 hover:text-white cursor-pointer" data-translate="navbar.contact">Contact</a></li>
+                            <li><a href="#about" class="text-base font-semibold text-blue-900 hover:text-white cursor-pointer" >About</a></li>
+                            <li><a href="#features" class="text-base font-semibold text-blue-900 hover:text-white cursor-pointer" >Features</a></li>
+                            <li><a href="#services" class="text-base font-semibold text-blue-900 hover:text-white cursor-pointer">Services</a></li>
+                            <li><a href="#faq" class="text-base font-semibold text-blue-900 hover:text-white cursor-pointer">FAQ</a></li>
+                            <li><a href="#contact" class="text-base font-semibold text-blue-900 hover:text-white cursor-pointer">Contact</a></li>
                         </ul>
                         <!-- Button -->
                         <div class="hidden lg:flex ">
-                            <button type="button" class="bg-blue-800 px-6 py-3 font-semibold lg:ml-6 text-white shadow hover:bg-blue-700 cursor-pointer" data-translate="navbar.button_text">
+                            <button type="button" class="bg-blue-800 px-6 py-3 font-semibold lg:ml-6 text-white shadow hover:bg-blue-700 cursor-pointer" >
                                 LOREM IPSUM
                             </button>
                         </div>
@@ -211,10 +212,11 @@
                         </div>
                         <div class="mt-6">
                             <ul class="space-y-2 py-6">
-                                <li><a href="#about" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" data-translate="navbar.about">About</a></li>
-                                <li><a href="#features" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" data-translate="navbar.features">Features</a></li>
-                                <li><a href="#testimonials" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" data-translate="navbar.testimonials">Testimonials</a></li>
-                                <li><a href="#contact" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" data-translate="navbar.contact">Contact</a></li>
+                                <li><a href="#about" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >About</a></li>
+                                <li><a href="#features" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >Features</a></li>
+                                <li><a href="#services" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >Services</a></li>
+                                <li><a href="#faq" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >FAQ</a></li>
+                                <li><a href="#contact" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >Contact</a></li>
                             </ul>
                             <div class="pt-10">
                                 <button type="button" class="mx-3 bg-blue-800 px-6 py-2.5 font-semibold text-white shadow hover:bg-blue-700" data-translate="navbar.button_text">
@@ -662,11 +664,11 @@
                     </div>
 
                     <form id="contactForm" class="space-y-10 mt-20">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
                             <!-- Text Input -->
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                                <input type="text" id="name" name="name" class="mt-1 p-2 border border-gray-300 bg-white dark:bg-gray-700 dark:text-white w-full" placeholder="Enter your name" required autocomplete="name"/>
+                                <input type="text" id="name" name="name" class="mt-1 p-2 border border-gray-300 bg-white dark:bg-gray-700 dark:text-white w-full" placeholder="Enter your name" autocomplete="name"/>
                                 <p id="name-error" class="text-red-500 text-xs mt-1 hidden">Please enter your full name with at least 3 characters in both parts (first and last name).</p>
                                 <p id="name-alphabet-error" class="text-red-500 text-xs mt-1 hidden">Name must contain only letters.</p>
                             </div>
@@ -674,14 +676,14 @@
                             <!-- Email Input -->
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                                <input type="email" id="email" name="email" class="mt-1 p-2 border border-gray-300 bg-white dark:bg-gray-700 dark:text-white w-full" placeholder="Enter your email" autocomplete="email" required/>
+                                <input type="email" id="email" name="email" class="mt-1 p-2 border border-gray-300 bg-white dark:bg-gray-700 dark:text-white w-full" placeholder="Enter your email" autocomplete="email" />
                                 <p id="email-error" class="text-red-500 text-xs mt-1 hidden">Please enter a valid email address.</p>
                             </div>
                     
                             <!-- Number Input -->
-                            <div>
+                            <div class="">
                                 <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
-                                <input type="number" id="age" name="age" class="mt-1 p-2 border border-gray-300 bg-white dark:bg-gray-700 dark:text-white w-full" placeholder="Enter your age" required/>
+                                <input type="number" id="age" name="age" class="mt-1 p-2 border border-gray-300 bg-white dark:bg-gray-700 dark:text-white w-full" placeholder="Enter your age" />
                                 <p id="age-error" class="text-red-500 text-xs mt-1 hidden">Age must be between 10 and 100.</p>
                             </div>
                         </div>
@@ -689,7 +691,7 @@
                         <!-- Textarea -->
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" class="mt-1 p-2 border border-gray-300 bg-white dark:bg-gray-700 dark:text-white w-full" placeholder="Enter your message" required></textarea>
+                            <textarea id="message" name="message" rows="4" class="mt-1 p-2 border border-gray-300 bg-white dark:bg-gray-700 dark:text-white w-full" placeholder="Enter your message"></textarea>
                             <p id="message-error" class="text-red-500 text-xs mt-1 hidden">Message is required.</p>
                         </div>
                     
@@ -699,19 +701,26 @@
                         </div>
                     </form>
                     <!-- Success/Failure Alert -->
-                    <div id="alert" class="hidden fixed top-4 right-4 max-w-sm w-full bg-blue-800 text-white p-4 rounded-lg shadow-lg flex items-center space-x-4 transform translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 0v12M0 12h12M12 12h12M12 24v-12"></path>
-                        </svg>
-                        <div id="alert-message" class="flex-1"></div>
-                        <button id="alert-close" class="bg-transparent border-0 text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <div id="alert" class="hidden fixed top-20 right-4 max-w-sm w-full sm:w-auto bg-blue-800 text-white p-4 rounded-lg shadow-lg items-center gap-3 transform translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out">
+                        <!-- Icon Container -->
+                        <div id="alert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 0v12M0 12h12M12 12h12M12 24v-12"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Alert Message -->
+                        <div id="alert-message" class="flex-1 text-sm font-medium"></div>
+
+                        <!-- Close Button -->
+                        <button id="alert-close" class="bg-transparent border-0 text-white hover:text-gray-300 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M18 6L6 18M6 6l12 12"></path>
                             </svg>
                         </button>
                     </div>
+
                 </div>
-                
             </section>
           </div>  
     </main>
@@ -720,13 +729,15 @@
     <!--Footer-->
     <footer class="relative w-full py-16 dark:bg-gray-800 opacity-0 translate-y-10 transition-all duration-700 ease-in-out fade-in">
         <div class="w-full px-8 mx-auto max-w-7xl">
-            <div class="grid justify-between grid-cols-1 gap-4 md:grid-cols-2">
-                <div class="dark:text-gray-200">
-                    <img loading="lazy" src="./assets/images/Logo-Dark.jpg" alt="" class="h-30 w-auto ml-10 rounded-full" width="250" height="100">
-                    <p class="px-6 mt-4 text-sm sm:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis in debitis non quia soluta eius ad illo odit obcaecati amet minima.
-                    </p>
-                    <div class="flex space-x-3 mt-6 px-6 mb-10">
+            <div class="grid md:justify-between grid-cols-1 gap-4 md:grid-cols-2 ">
+                <div class="dark:text-gray-500">
+                    <div class="md:flex md:flex-col md:justify-start justify-center">
+                        <img loading="lazy" src="./assets/images/Logo-Dark.jpg" alt="" class="md:h-30 h-auto md:w-auto w-70 md:ml-10 mx-auto rounded-full md:text-left text-center items-center" width="250" height="250">
+                        <p class="px-6 mt-4 text-sm sm:text-base md:text-left text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis in debitis non quia soluta eius ad illo odit obcaecati amet minima.
+                        </p>
+                    </div>
+                    <div class="flex space-x-3 mt-6 px-6 mb-10 justify-center md:justify-start">
                         <!-- Facebook -->
                         <a href="#" class="hover:text-gray-400 text-white" aria-label="Visit Example homepage">
                             <svg class="w-6 h-6 dark:bg-white rounded-full items-center p-1" width="11" height="23" viewBox="0 0 11 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -761,99 +772,104 @@
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22H17.6V14.3011C17.6 12.1891 16.6683 11.0107 14.9974 11.0107C13.1791 11.0107 12.1 12.2386 12.1 14.3011V22H7.7V7.7H12.1V9.30811C12.1 9.30811 13.4805 6.88574 16.5913 6.88574C19.7032 6.88574 22 8.78472 22 12.7139V22ZM2.6862 5.41299C1.2023 5.41299 0 4.20086 0 2.70596C0 1.21216 1.2023 0 2.6862 0C4.169 0 5.3713 1.21216 5.3713 2.70596C5.3724 4.20086 4.169 5.41299 2.6862 5.41299ZM0 22H5.5V7.7H0V22Z" fill="#171F84"/>
                             </svg>
                         </a>
-                  </div>          
-             </div>
-
-             <div class="grid sm:justify-between text-center sm:text-left grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 item-center justify-center">
-                <ul>
-                <li><p class="block text-xl font-semibold dark:text-gray-300 text-slate-800 mb-5">
-                  Printing As
-                </p></li>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Lorem
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1  dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Ipsum its
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Simply dummy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
-                    Printings
-                  </a>
-                </li>
-                <li>
-                    <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
-                        typesettings
-                    </a>
-                  </li>
-              </ul>
-              <ul>
-            <li><p class="block mb-5 text-xl font-semibold text-slate-800 dark:text-gray-300">
-                    Majority
-                </p></li>
-                <li>
-                    <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
-                      Lorem
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
-                      Ipsum its
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
-                      Simply dummy
-                    </a>
-                  </li>
-              </ul>
-              <ul class="space-y-6 sm:text-left text-center">
-            <li><p class="block mb-5 text-xl font-semibold text-slate-800 dark:text-gray-300">
-                    Generator
-                </p></li>
-                <li class="flex justify-center sm:justify-start items-center space-x-3">
-                    <svg class="w-6 h-6 dark:bg-white rounded-lg items-center p-1" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.4635 8.9816L10.0839 9.35449C10.0839 9.35449 9.18174 10.241 6.71924 7.82124C4.25676 5.40155 5.15891 4.51507 5.15891 4.51507L5.39791 4.2802C5.98674 3.70164 6.04224 2.77275 5.52849 2.09463L4.47771 0.707477C3.84189 -0.131834 2.6133 -0.242706 1.88454 0.473388L0.57654 1.75867C0.21519 2.11374 -0.0269598 2.57402 0.00240683 3.08463C0.0775318 4.39092 0.675589 7.20153 4.01279 10.4808C7.55174 13.9582 10.8723 14.0964 12.2302 13.9713C12.6597 13.9318 13.0332 13.7156 13.3342 13.4198L14.5181 12.2566C15.3172 11.4714 15.0918 10.1252 14.0694 9.57602L12.4773 8.7207C11.806 8.36008 10.9882 8.46599 10.4635 8.9816Z" fill="#1C238D"/>
-                    </svg>
-                    <div>
-                        <a href="#" class="block text-slate-600 dark:text-gray-400 hover:text-slate-500 text-sm">
-                            Lorem:(123) 456-7890
-                        </a>
-                        <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
-                            Ipsum:(123) 456-7890
-                        </a>
-                    </div>
-                </li>
-                <li class="flex justify-center sm:justify-start space-x-3">
-                    <svg class="w-6 h-6 dark:bg-white rounded-lg items-center p-1" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 8.316L0 2.43266V10H14V2.43266L7 8.316ZM7.0007 6.54134L0 0.654012V0H14V0.654012L7.0007 6.54134Z" fill="#1C238D"/>
-                    </svg>
-                    <div>
-                        <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
-                            info@loremipsum.com
-                        </a>
-                    </div>
-                </li>
-                <li class="flex justify-center sm:justify-start space-x-3">
-                    <svg class="w-6 h-6 dark:bg-white rounded-lg items-center p-1" width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.5 0C3.35813 0 0 3.35813 0 7.5C0 9.13094 0.534688 10.6275 1.42344 11.8531C1.43938 11.8825 1.44187 11.9153 1.46 11.9434L6.46 19.4434C6.69188 19.7913 7.0825 20 7.5 20C7.9175 20 8.30812 19.7913 8.54 19.4434L13.54 11.9434C13.5584 11.9153 13.5606 11.8825 13.5766 11.8531C14.4653 10.6275 15 9.13094 15 7.5C15 3.35813 11.6419 0 7.5 0ZM7.5 10C6.11937 10 5 8.88062 5 7.5C5 6.11937 6.11937 5 7.5 5C8.88062 5 10 6.11937 10 7.5C10 8.88062 8.88062 10 7.5 10Z" fill="#1C238D"/>
-                    </svg>
-                    <div>
-                        <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
-                            Lorem Ipsum is simply dummy text of the
-                        </a>
-                    </div>
-                </li>
-              </ul>            
-            </div>
+                    </div>          
+                </div>
+                <div class="grid md:justify-between text-center md:text-left grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 item-center justify-center">
+                    <ul>
+                        <li>
+                            <p class="block text-xl font-semibold dark:text-gray-300 text-slate-800 mb-5">
+                                Printing As
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
+                                Lorem
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-slate-600 py-1  dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
+                                Ipsum its
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
+                                Simply dummy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
+                                Printings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
+                                typesettings
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p class="block mb-5 text-xl font-semibold text-slate-800 dark:text-gray-300">
+                                Majority
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
+                                Lorem
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
+                            Ipsum its
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 focus:text-slate-500 text-sm">
+                            Simply dummy
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="space-y-6 md:text-left text-center">
+                        <li>
+                            <p class="block mb-5 text-xl font-semibold text-slate-800 dark:text-gray-300">
+                                Generator
+                            </p>
+                        </li>
+                        <li class="flex justify-center md:justify-start items-center space-x-3">
+                            <svg class="w-6 h-6 dark:bg-white rounded-lg items-center p-1" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4635 8.9816L10.0839 9.35449C10.0839 9.35449 9.18174 10.241 6.71924 7.82124C4.25676 5.40155 5.15891 4.51507 5.15891 4.51507L5.39791 4.2802C5.98674 3.70164 6.04224 2.77275 5.52849 2.09463L4.47771 0.707477C3.84189 -0.131834 2.6133 -0.242706 1.88454 0.473388L0.57654 1.75867C0.21519 2.11374 -0.0269598 2.57402 0.00240683 3.08463C0.0775318 4.39092 0.675589 7.20153 4.01279 10.4808C7.55174 13.9582 10.8723 14.0964 12.2302 13.9713C12.6597 13.9318 13.0332 13.7156 13.3342 13.4198L14.5181 12.2566C15.3172 11.4714 15.0918 10.1252 14.0694 9.57602L12.4773 8.7207C11.806 8.36008 10.9882 8.46599 10.4635 8.9816Z" fill="#1C238D"/>
+                            </svg>
+                            <div>
+                                <a href="#" class="block text-slate-600 dark:text-gray-400 hover:text-slate-500 text-sm">
+                                    Lorem:(123) 456-7890
+                                </a>
+                                <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
+                                    Ipsum:(123) 456-7890
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex justify-center md:justify-start space-x-3">
+                            <svg class="w-6 h-6 dark:bg-white rounded-lg items-center p-1" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 8.316L0 2.43266V10H14V2.43266L7 8.316ZM7.0007 6.54134L0 0.654012V0H14V0.654012L7.0007 6.54134Z" fill="#1C238D"/>
+                            </svg>
+                            <div>
+                                <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
+                                    info@loremipsum.com
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex justify-center md:justify-start space-x-3">
+                            <svg class="w-6 h-6 dark:bg-white rounded-lg items-center p-1" width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 0C3.35813 0 0 3.35813 0 7.5C0 9.13094 0.534688 10.6275 1.42344 11.8531C1.43938 11.8825 1.44187 11.9153 1.46 11.9434L6.46 19.4434C6.69188 19.7913 7.0825 20 7.5 20C7.9175 20 8.30812 19.7913 8.54 19.4434L13.54 11.9434C13.5584 11.9153 13.5606 11.8825 13.5766 11.8531C14.4653 10.6275 15 9.13094 15 7.5C15 3.35813 11.6419 0 7.5 0ZM7.5 10C6.11937 10 5 8.88062 5 7.5C5 6.11937 6.11937 5 7.5 5C8.88062 5 10 6.11937 10 7.5C10 8.88062 8.88062 10 7.5 10Z" fill="#1C238D"/>
+                            </svg>
+                            <div>
+                                <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
+                                    Lorem Ipsum is simply dummy text of the
+                                </a>
+                            </div>
+                        </li>
+                    </ul>            
+                </div>
           </div>
           <div class="flex flex-col items-center justify-center w-full py-4 mt-12 border-t border-slate-200 ">
             <p class=" text-sm text-center text-slate-500 dark:text-gray-400">

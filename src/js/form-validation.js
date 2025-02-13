@@ -2,96 +2,38 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
-    const alertBox = document.getElementById("alert");
-    const alertMessage = document.getElementById("alert-message");
-    const alertCloseButton = document.getElementById("alert-close");
+
+    // Input Fields
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const ageInput = document.getElementById("age");
+    const messageInput = document.getElementById("message");
+
+    // Error Messages
+    const nameError = document.getElementById("name-error");
+    const nameAlphabetError = document.getElementById("name-alphabet-error");
+    const emailError = document.getElementById("email-error");
+    const ageError = document.getElementById("age-error");
+    const messageError = document.getElementById("message-error");
+
+    // Regular Expressions
+    const nameRegex = /^[A-Za-z]{3,} [A-Za-z]{3,}$/;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Event Listeners for real-time validation
+    nameInput.addEventListener("input", validateName);
+    emailInput.addEventListener("input", validateEmail);
+    ageInput.addEventListener("input", validateAge);
+    messageInput.addEventListener("input", validateMessage);
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form from submitting by default
-
-        // Reset error messages
-        resetErrors();
-
-        // Validate each field
-        const isValid = validateForm();
-        
-        if (isValid) {
+        event.preventDefault();
+        if (validateForm()) {
             showAlert("Success! Your form has been submitted.", "success");
             form.reset();
+            resetBorders();
         }
     });
-
-    function validateForm() {
-        let isValid = true;
-
-        // Name field (Ensure at least two parts, each part has at least 3 characters)
-        const name = document.getElementById("name").value.trim();
-        const nameParts = name.split(" ");
-        const nameRegex = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;        
-        if (nameParts.length < 2 || nameParts[0].length < 3 || nameParts[1].length < 3) {
-            isValid = false;
-            document.getElementById("name-error").classList.remove("hidden");
-        }
-        if (!nameRegex.test(name)) {
-            isValid = false;
-            document.getElementById("name-alphabet-error").classList.remove("hidden");
-        }
-
-        // Email field (Check for a valid email format)
-        const email = document.getElementById("email").value.trim();
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailPattern.test(email)) {
-            isValid = false;
-            document.getElementById("email-error").classList.remove("hidden");
-        }
-
-        // Validate Age field (Ensure age is a positive number and reasonable, between 18 and 100)
-        const age = document.getElementById("age").value.trim();
-        if (age === "" || isNaN(age) || age < 10 || age > 100) {
-            isValid = false;
-            document.getElementById("age-error").classList.remove("hidden");
-        }
-
-        // Message field (Ensure the message is not empty)
-        const message = document.getElementById("message").value.trim();
-        if (message === "") {
-            isValid = false;
-            document.getElementById("message-error").classList.remove("hidden");
-        }
-
-        return isValid;
-    }
-
-    // Function alert message
-    function showAlert(message, type) {
-        const alertBox = document.getElementById("alert");
-        const alertMessage = document.getElementById("alert-message");
-    
-        alertMessage.textContent = message;
-    
-        // Reset alert style
-        alertBox.classList.remove("bg-green-600", "bg-red-600", "opacity-0", "translate-y-[-50px]");
-        
-        if (type === "success") {
-            alertBox.classList.add("bg-green-600");
-        } else {
-            alertBox.classList.add("bg-red-600");
-        }
-       
-        alertBox.classList.remove("hidden");
-
-        setTimeout(function () {
-            alertBox.classList.add("opacity-100", "translate-y-0");
-        }, 100);
-        setTimeout(function () {
-            alertBox.classList.remove("opacity-100", "translate-y-0");
-            alertBox.classList.add("opacity-0", "translate-y-[-50px]");
-    
-            setTimeout(function () {
-                alertBox.classList.add("hidden");
-            }, 300); 
-        }, 2000);
-    }
 
     // Close the alert when button is clicked
     document.getElementById("alert-close").addEventListener("click", function () {
@@ -103,15 +45,117 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300);
     });
 
+    // Function alert message
+    function showAlert(message, type) {
+        console.log("showAlert called with message:", message); // Debugging
 
-    // Function to reset error messages
-    function resetErrors() {
-        document.getElementById("name-error").classList.add("hidden");
-        document.getElementById("name-alphabet-error").classList.add("hidden");
-        document.getElementById("email-error").classList.add("hidden");
-        document.getElementById("age-error").classList.add("hidden");
-        document.getElementById("message-error").classList.add("hidden");
+        const alertBox = document.getElementById("alert");
+        const alertMessage = document.getElementById("alert-message");
+    
+        alertMessage.textContent = message;
+        
+        // Reset alert style
+        alertBox.classList.remove("bg-green-600", "bg-red-600", "opacity-0", "translate-y-[-50px]");
+        
+        if (type === "success") {
+            alertBox.classList.add("bg-green-600");
+        } else {
+            alertBox.classList.add("bg-red-600");
+        }
+       
+        alertBox.classList.remove("hidden");
+        alertBox.classList.add("flex");
+
+        setTimeout(function () {
+            alertBox.classList.add("opacity-100", "translate-y-0");
+        }, 100);
+        setTimeout(function () {
+            alertBox.classList.remove("opacity-100", "translate-y-0");
+            alertBox.classList.add("opacity-0", "translate-y-[-50px]");
+    
+            setTimeout(function () {
+                alertBox.classList.add("hidden");
+                alertBox.classList.remove("flex");
+            }, 300); 
+        }, 2000);
+    }
+
+    function validateName() {
+        const name = nameInput.value.trim();
+        const nameParts = name.split(" ");
+
+        if (nameParts.length < 2 || nameParts[0].length < 3 || nameParts[1].length < 3) {
+            showError(nameInput, nameError);
+        } else {
+            hideError(nameInput, nameError);
+        }
+
+        if (!nameRegex.test(name)) {
+            showError(nameInput, nameAlphabetError);
+        } else {
+            hideError(nameInput, nameAlphabetError);
+        }
+    }
+
+    function validateEmail() {
+        if (!emailPattern.test(emailInput.value.trim())) {
+            showError(emailInput, emailError);
+        } else {
+            hideError(emailInput, emailError);
+        }
+    }
+
+    function validateAge() {
+        const age = ageInput.value.trim();
+        if (age === "" || isNaN(age) || age < 10 || age > 100) {
+            showError(ageInput, ageError);
+        } else {
+            hideError(ageInput, ageError);
+        }
+    }
+
+    function validateMessage() {
+        if (messageInput.value.trim() === "") {
+            showError(messageInput, messageError);
+        } else {
+            hideError(messageInput, messageError);
+        }
+    }
+
+    function validateForm() {
+        validateName();
+        validateEmail();
+        validateAge();
+        validateMessage();
+
+        return (
+            !nameError.classList.contains("block") &&
+            !nameAlphabetError.classList.contains("block") &&
+            !emailError.classList.contains("block") &&
+            !ageError.classList.contains("block") &&
+            !messageError.classList.contains("block")
+        );
+    }
+
+    function showError(input, errorMessage) {
+        errorMessage.classList.remove("hidden");
+        errorMessage.classList.add("block");
+        input.classList.remove("border-gray-300", "border-green-500");
+        input.classList.add("border-red-500");
+    }
+
+    function hideError(input, errorMessage) {
+        errorMessage.classList.add("hidden");
+        errorMessage.classList.remove("block");
+        input.classList.remove("border-gray-300", "border-red-500");
+        input.classList.add("border-green-500");
+    }
+
+    function resetBorders() {
+        nameInput.classList.remove("border-red-500", "border-green-500");
+        emailInput.classList.remove("border-red-500", "border-green-500");
+        ageInput.classList.remove("border-red-500", "border-green-500");
+        messageInput.classList.remove("border-red-500", "border-green-500");
     }
 });
-
 
