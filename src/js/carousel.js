@@ -22,9 +22,14 @@ function initializeCarousel({
 
         function updateSlide(index) {
             items.forEach((item, i) => {
+
+                const img = item.querySelector("picture");
+
                 if (i === index) {
                     item.classList.add("opacity-100", "z-10", "pointer-events-auto");
                     item.classList.remove("opacity-0", "z-0", "pointer-events-none");
+                    img.classList.add("opacity-100");  
+                    img.classList.remove("opacity-0");
                     if (dots.length) {
                         dots[i].classList.add("bg-blue-900");
                         dots[i].classList.remove("bg-gray-500");
@@ -32,6 +37,8 @@ function initializeCarousel({
                 } else {
                     item.classList.add("opacity-0", "z-0", "pointer-events-none");
                     item.classList.remove("opacity-100", "z-10", "pointer-events-auto");
+                    img.classList.add("opacity-0");  
+                    img.classList.remove("opacity-100");
                     if (dots.length) {
                         dots[i].classList.add("bg-gray-500");
                         dots[i].classList.remove("bg-blue-900");
