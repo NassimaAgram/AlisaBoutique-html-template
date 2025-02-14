@@ -22,5 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.documentElement.classList.remove("dark");
             localStorage.setItem("darkMode", "disabled");
         }
+        
     });
 });

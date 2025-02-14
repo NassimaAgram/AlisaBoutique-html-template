@@ -32,6 +32,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="./assets/images/Logo.png" as="image">
     <link rel="preload" href="./assets/images/Logo-footer.jpg" as="image">
+    <meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/images/favicon.png" type="image/png">
@@ -106,13 +107,13 @@
                         </svg>                  
                     </div> 
                     <div class="flex items-center space-x-2 px-4 border-r-2 border-gray-400">
-                        <span class="text-sm">info@loremipsum.com</span>
+                        <a href="mailto:info@loremipsum.com" class="text-sm">info@loremipsum.com</a>
                         <svg class="w-4 h-4" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M7 8.316L0 2.43266V10H14V2.43266L7 8.316ZM7.0007 6.54134L0 0.654012V0H14V0.654012L7.0007 6.54134Z" fill="#1C238D"/>
                         </svg>
                     </div>
                     <div class="flex items-center space-x-2 px-4 border-r-2 border-gray-400">
-                        <span class="text-sm">(123) 456-7890</span>
+                        <a ref="tel:1234567890" class="text-sm">(123) 456-7890</a>
                         <svg class="w-4 h-4" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.4635 8.9816L10.0839 9.35449C10.0839 9.35449 9.18174 10.241 6.71924 7.82124C4.25676 5.40155 5.15891 4.51507 5.15891 4.51507L5.39791 4.2802C5.98674 3.70164 6.04224 2.77275 5.52849 2.09463L4.47771 0.707477C3.84189 -0.131834 2.6133 -0.242706 1.88454 0.473388L0.57654 1.75867C0.21519 2.11374 -0.0269598 2.57402 0.00240683 3.08463C0.0775318 4.39092 0.675589 7.20153 4.01279 10.4808C7.55174 13.9582 10.8723 14.0964 12.2302 13.9713C12.6597 13.9318 13.0332 13.7156 13.3342 13.4198L14.5181 12.2566C15.3172 11.4714 15.0918 10.1252 14.0694 9.57602L12.4773 8.7207C11.806 8.36008 10.9882 8.46599 10.4635 8.9816Z" fill="#1C238D"/>
                         </svg>
@@ -855,10 +856,10 @@
                                 <path d="M10.4635 8.9816L10.0839 9.35449C10.0839 9.35449 9.18174 10.241 6.71924 7.82124C4.25676 5.40155 5.15891 4.51507 5.15891 4.51507L5.39791 4.2802C5.98674 3.70164 6.04224 2.77275 5.52849 2.09463L4.47771 0.707477C3.84189 -0.131834 2.6133 -0.242706 1.88454 0.473388L0.57654 1.75867C0.21519 2.11374 -0.0269598 2.57402 0.00240683 3.08463C0.0775318 4.39092 0.675589 7.20153 4.01279 10.4808C7.55174 13.9582 10.8723 14.0964 12.2302 13.9713C12.6597 13.9318 13.0332 13.7156 13.3342 13.4198L14.5181 12.2566C15.3172 11.4714 15.0918 10.1252 14.0694 9.57602L12.4773 8.7207C11.806 8.36008 10.9882 8.46599 10.4635 8.9816Z" fill="#1C238D"/>
                             </svg>
                             <div>
-                                <a href="#" class="block text-slate-600 dark:text-gray-400 hover:text-slate-500 text-sm">
+                                <a ref="tel:1234567890" class="block text-slate-600 dark:text-gray-400 hover:text-slate-500 text-sm">
                                     لوريم:(123) 456-7890
                                 </a>
-                                <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
+                                <a ref="tel:1234567890" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
                                     إبسوم:(123) 456-7890
                                 </a>
                             </div>
@@ -868,7 +869,7 @@
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7 8.316L0 2.43266V10H14V2.43266L7 8.316ZM7.0007 6.54134L0 0.654012V0H14V0.654012L7.0007 6.54134Z" fill="#1C238D"/>
                             </svg>
                             <div>
-                                <a href="#" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
+                                <a href="mailto:info@loremipsum.com" class="block text-slate-600 py-1 dark:text-gray-400 hover:text-slate-500 text-sm">
                                     info@loremipsum.com
                                 </a>
                             </div>
@@ -886,12 +887,12 @@
                     </ul>            
                 </div>
                 
-                <div class="flex flex-col items-center justify-center w-full py-4 mt-12 border-t border-slate-200 ">
-                    <p class="text-sm text-center text-slate-500 dark:text-gray-400">
-                        حقوق الطبع والنشر © 2024
-                        <a href="#">أليسا بوتيك</a>. جميع الحقوق محفوظة.
-                    </p>
-                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center w-full py-4 mt-12 border-t border-slate-200 ">
+                <p class="text-sm text-center text-slate-500 dark:text-gray-400">
+                    حقوق الطبع والنشر © 2024
+                    <a href="#">أليسا بوتيك</a>. جميع الحقوق محفوظة.
+                </p>
             </div>
         </div>
     </footer>        
