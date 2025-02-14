@@ -1,40 +1,49 @@
-// load new card
-
 let clickCount = 0;
+const maxClicks = 3;  // Limit how many times "Load More" can be clicked
 
-function createCard() {
-    // New card container
-    const card = document.createElement("div");
-    card.classList.add("relative", "flex", "w-full");
-
-    // Inner card content
-    const cardContent = `
-        <div class="bg-white shadow w-full sm:w-60 p-6 relative z-10 ">
-            <div class="bg-gray-300 h-20 w-20 mb-4"></div>
-            <h3 class="text-lg font-semibold text-gray-900">Lorem Ipsum Is Simply Dummy</h3>
-            <p class="text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing.</p>
-            <button class="mt-6 bg-gray-100 cursor-pointer text-gray-900 hover:bg-blue-900 hover:text-white p-3 rounded-full">
-                ➜
-            </button>
-        </div>
-        <div class="block md:w-36 w-50 bg-gray-300 shadow"></div>
+// Function to create a card
+function createCard(language = 'en') {
+    // Define content based on language
+    const cardContent = language === 'ar' ? `
+            <div class="bg-white dark:bg-gray-800 shadow w-full sm:w-60 p-6 relative z-10">
+                <div class="bg-gray-300 h-20 w-20 mb-4"></div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">لوريم إيبسوم هو نص شكلي</h3>
+                <p class="text-gray-600 mt-2 dark:text-gray-400">لوريم إيبسوم هو نص شكلي يستخدم في الطباعة.</p>
+                <button class="mt-6 bg-gray-100 dark:bg-gray-600 dark:text-white cursor-pointer text-gray-900 hover:bg-blue-700 hover:text-white p-3 rounded-full">
+                    ➜
+                </button>
+            </div>
+            <div class="block md:w-36 w-50 bg-gray-300"></div>
+    ` : `
+            <div class="bg-white dark:bg-gray-800 shadow w-full sm:w-60 p-6 relative z-10">
+                <div class="bg-gray-300 h-20 w-20 mb-4"></div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Lorem Ipsum Is Simply Dummy</h3>
+                <p class="text-gray-600 mt-2 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing.</p>
+                <button class="mt-6 bg-gray-100 dark:bg-gray-600 dark:text-white cursor-pointer text-gray-900 hover:bg-blue-700 hover:text-white p-3 rounded-full">
+                    ➜
+                </button>
+            </div>
+            <div class="block md:w-36 w-50 shadow bg-gray-300"></div>
     `;
 
-    // Set the inner HTML of the card container
+    // Create and return the card element
+    const card = document.createElement("div");
+    card.classList.add("relative", "flex", "w-full");
     card.innerHTML = cardContent;
-
     return card;
 }
 
-// Handle the 'Load More' button 
+// Handle the 'Load More' button click
 document.getElementById("load-more").addEventListener("click", function () {
     const cardContainer = document.getElementById("card-container");
-    // Add 3 new cards
+
+    const currentLang = document.documentElement.lang || 'en';  
     for (let i = 0; i < 3; i++) {
-        cardContainer.appendChild(createCard());
+        cardContainer.appendChild(createCard(currentLang));
     }
 
-    if (clickCount >= 2) {
+    clickCount += 1;
+    if (clickCount >= maxClicks) {
         document.getElementById("load-more").style.display = "none";
     }
 });
