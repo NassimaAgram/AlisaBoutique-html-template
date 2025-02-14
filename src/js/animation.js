@@ -1,7 +1,7 @@
 // Trigger the animations
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Select all elements that you want to animate on scroll
+
     const elements = document.querySelectorAll('.fade-in');
 
     // Create a new Intersection Observer

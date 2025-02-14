@@ -1,5 +1,3 @@
-// toggle the button text and animate answer visibility when details are opened/closed
-
 document.addEventListener('DOMContentLoaded', function () {
     const faqItems = document.querySelectorAll('.faq-item');
 
@@ -9,9 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const answer = item.querySelector('.faq-answer');
         
         // Initial state setup
-        answer.style.maxHeight = 0; 
+        answer.style.maxHeight = 0;
+        detailsElement.addEventListener('click', function (event) {
+            event.preventDefault(); 
+        });
         
-        detailsElement.addEventListener('toggle', function () {
+        // Button click event to toggle answer visibility
+        toggleButton.addEventListener('click', function () {
+
+            detailsElement.open = !detailsElement.open;
+            
             if (detailsElement.open) {
                 toggleButton.textContent = '-'; 
                 answer.classList.remove('hidden');

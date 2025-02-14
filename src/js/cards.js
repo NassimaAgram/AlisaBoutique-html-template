@@ -1,5 +1,7 @@
 // load new card
 
+let clickCount = 0;
+
 function createCard() {
     // New card container
     const card = document.createElement("div");
@@ -30,5 +32,9 @@ document.getElementById("load-more").addEventListener("click", function () {
     // Add 3 new cards
     for (let i = 0; i < 3; i++) {
         cardContainer.appendChild(createCard());
+    }
+
+    if (clickCount >= 2) {
+        document.getElementById("load-more").style.display = "none";
     }
 });

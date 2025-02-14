@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const darkToggle = document.getElementById("dark-toggle");
 
-    // Check if the user has a stored preference
     const darkMode = localStorage.getItem("darkMode");
 
-    // Dark mode based on the stored preference
     if (darkMode === "enabled") {
         document.documentElement.classList.replace("light", "dark");
         darkToggle.checked = true;
