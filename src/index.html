@@ -139,6 +139,11 @@
                     </button>
                 </div>
 
+                <!-- Language Switcher (Mobile only) -->
+                <div class="language-switcher lg:hidden flex items-center space-x-2 pl-4">
+                    <a href="ar-version.html" class="text-sm">AR</a>
+                </div>
+
                 <!-- Dark Mode Toggle -->
                 <div class="flex flex-col justify-center ml-3">
                     <input type="checkbox" id="dark-toggle" class="dark-toggle sr-only">
@@ -169,8 +174,8 @@
             <header class="container mx-auto relative z-50">
                 <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div class="flex lg:flex-1">
-                        <a href="#" class="-mx-10 p-1.5 -mt-8 ">
-                            <img loading="lazy" class="h-40 w-auto" src="./assets/images/Logo.png" alt="Alisa" width="250" height="250">
+                        <a href="#" class="-mx-6 p-1.5 -mt-8 ">
+                            <img loading="lazy" class=" md:h-40 h-30 w-auto" src="./assets/images/Logo.png" alt="Alisa" width="250" height="250">
                         </a>
                     </div>
 
@@ -216,11 +221,11 @@
                         </div>
                         <div class="mt-6">
                             <ul class="space-y-2 py-6">
-                                <li><a href="#about" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >About</a></li>
-                                <li><a href="#features" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >Features</a></li>
-                                <li><a href="#services" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >Services</a></li>
-                                <li><a href="#faq" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >FAQ</a></li>
-                                <li><a href="#contact" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100" >Contact</a></li>
+                                <li><a href="#about" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100 dark:text-white" >About</a></li>
+                                <li><a href="#features" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100 dark:text-white" >Features</a></li>
+                                <li><a href="#services" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100 dark:text-white" >Services</a></li>
+                                <li><a href="#faq" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100 dark:text-white" >FAQ</a></li>
+                                <li><a href="#contact" class="block px-3 py-2 text-xl text-gray-900 hover:bg-gray-100 dark:text-white" >Contact</a></li>
                             </ul>
                             <div class="pt-10">
                                 <button type="button" class="mx-3 bg-blue-800 px-6 py-2.5 font-semibold text-white shadow hover:bg-blue-700" data-translate="navbar.button_text">
@@ -234,12 +239,12 @@
 
           
             <!-- Hero Section -->
-            <section id="hero" class="relative -top-72 isolate px-6 pt-32 pb-16 lg:px-8 z-0">
+            <section id="hero" class="relative md:-top-76 -top-68 isolate px-6 pt-32 pb-16 lg:px-8 z-0">
                 <div class="relative w-full h-[600px] md:h-[700px] lg:h-[800px]">
                     <!-- Carousel Items -->
                     <div id="hero-carousel" class="hero-carousel relative w-full h-full flex overflow-x-hidden scroll-smooth snap-x snap-mandatory">
                         <!-- Slide 1 -->
-                        <<div class="hero-slide w-full h-full flex-shrink-0 snap-start relative">
+                        <div class="hero-slide w-full h-full flex-shrink-0 snap-start relative">
                             <picture class="absolute top-0 left-0 w-full h-full z-10">
                                 <source media="(min-width: 1024px)" srcset="./assets/images/dummyimg/fff&text=DummyImg+lg+1.png">
                                 <source media="(min-width: 768px)" srcset="./assets/images/dummyimg/fff&text=DummyImg+md+1.png">
@@ -761,9 +766,7 @@
                 <div class="dark:text-gray-500">
                     <div class="md:flex md:flex-col md:justify-start justify-center">
                         <picture class="relative w-full h-full">
-                            <!-- WebP format -->
                             <source type="image/webp" srcset="./assets/images/Logo-footer.webp" width="250" height="250">
-                            <!-- Fallback to JPEG if WebP is not supported -->
                             <img loading="lazy" src="./assets/images/Logo-footer.jpg" alt="" class="md:h-[130px] h-auto md:w-auto w-[200px] md:ml-10 mx-auto rounded-full md:text-left text-center items-center" width="250" height="250">
                         </picture>
                         <p class="px-6 mt-4 text-sm sm:text-base md:text-left text-center">

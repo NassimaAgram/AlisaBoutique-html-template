@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeBtn = document.getElementById("close-menu");
     const navLinks = document.querySelectorAll("nav a, #mobile-menu a"); 
 
+    const isRTL = document.documentElement.getAttribute("dir") === "rtl"; 
+
     // Function Open menu
     function openMenu() {
         menu.classList.remove("hidden");
@@ -15,8 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
             menuOverlay.classList.remove("hidden", "opacity-0");
             menuOverlay.classList.add("opacity-100");
             menuPanel.classList.remove("translate-x-full");
+            if (isRTL) {
+                menuPanel.classList.remove("-translate-x-full"); 
+            } else {
+                menuPanel.classList.remove("translate-x-full"); 
+            }
             menuPanel.classList.add("translate-x-0");
-        }, 10); // Small delay to trigger animation
+
+        }, 10); 
     }
 
     // Function Close menu
@@ -24,7 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
         menuOverlay.classList.remove("opacity-100");
         menuOverlay.classList.add("opacity-0");
         menuPanel.classList.remove("translate-x-0");
-        menuPanel.classList.add("translate-x-full");
+        if (isRTL) {
+            menuPanel.classList.add("-translate-x-full"); 
+        } else {
+            menuPanel.classList.add("translate-x-full"); 
+        }
 
         setTimeout(() => {
             menu.classList.add("hidden");

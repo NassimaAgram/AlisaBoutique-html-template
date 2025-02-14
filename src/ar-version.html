@@ -75,6 +75,11 @@
                     </label>
                 </div>      
 
+                <!-- Language Switcher (Mobile only) -->
+                <div class="language-switcher lg:hidden flex items-center space-x-2 pl-4">
+                    <a href="index.html" class="text-sm">EN</a>
+                </div>
+
                 <!-- Search Box -->
                 <div class="relative flex items-center space-x-3 pl-4 text-sm text-right">
                     <button id="search-btn" class="text-gray-600 flex flex-row cursor-pointer dark:text-white" aria-label="search">
@@ -165,8 +170,8 @@
             <header class="container mx-auto relative z-50">
                 <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div class="flex lg:flex-1">
-                        <a href="#" class="-mx-10 p-1.5">
-                            <img loading="lazy" class="h-25 w-auto" src="./assets/images/Logo.png" alt="Alisa" width="250" height="100">
+                        <a href="#" class="-mx-6 p-1.5 -mt-8">
+                            <img loading="lazy" class="md:h-40 h-30 w-auto" src="./assets/images/Logo.png" alt="Alisa" width="250" height="250">
                         </a>
                     </div>
 
@@ -186,7 +191,7 @@
                     </div>
 
                     <div id="open-menu" class="flex lg:hidden pl-16 lg:pr-0">
-                        <button type="button" class="-ml-30 inline-flex items-center justify-center rounded-md p-2.5 text-blue-900 font-bold">
+                        <button type="button" class="-ml-30 inline-flex items-center justify-center rounded-md p-2.5 text-blue-900 font-bold"  aria-label="Open menu">
                             <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
@@ -197,10 +202,10 @@
                 <!-- Mobile menu -->
                 <div id="mobile-menu" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
                     <div id="menu-overlay" class="fixed inset-0 bg-black/50"></div>
-                    <div id="menu-panel" class="fixed inset-y-0 right-0 w-full sm:max-w-sm bg-white dark:bg-gray-800 dark:text-white p-6 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+                    <div id="menu-panel" class="fixed inset-y-0 left-0 w-full sm:max-w-sm bg-white dark:bg-gray-800 dark:text-white p-6 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
                         <div class="flex items-center justify-between">
-                            <a href="#" class="-ml-14 p-1.5">
-                                <img loading="lazy" class="h-20 w-auto" src="./assets/images/Logo.png" alt="Alisa" width="250" height="100">
+                            <a href="#" class="-mr-8 p-1.5">
+                                <img loading="lazy" class="h-40 w-auto" src="./assets/images/Logo.png" alt="Alisa" width="250" height="250">
                             </a>
                             <button id="close-menu" class="-m-2.5 rounded-md p-2.5 text-blue-900 cursor-pointer">
                                 <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -227,16 +232,16 @@
 
 
             <!-- Hero Section -->
-            <section id="hero" class="relative -top-72 isolate px-6 pt-32 pb-16 lg:px-8 z-0">
+            <section id="hero" class="relative md:-top-76 -top-68 isolate px-6 pt-32 pb-16 lg:px-8 z-0">
                 <div class="relative w-full h-[600px] md:h-[700px] lg:h-[800px]">
                     <!-- Carousel Items -->
                     <div id="hero-carousel" class="hero-carousel relative w-full h-full flex overflow-x-hidden scroll-smooth snap-x snap-mandatory">
                         <!-- Slide 1 -->
                         <div class="hero-slide w-full h-full flex-shrink-0 snap-start relative">
-                            <picture class="absolute top-0 left-0 w-full h-full z-10"> 
-                                <source type="image/webp" media="(min-width: 1024px)" srcset="https://dummyimage.com/1200x800/dbdbdb/fff&text=DummyImg+lg+1">
-                                <source type="image/webp" media="(min-width: 768px)" srcset="https://dummyimage.com/800x533/dbdbdb/fff&text=DummyImg+md+1">
-                                <img src="https://dummyimage.com/600x400/dbdbdb/fff&text=DummyImg+sm+1" alt="Slide 1" class="w-full h-full object-cover" width="600" height="400">
+                            <picture class="absolute top-0 left-0 w-full h-full z-10">
+                                <source media="(min-width: 1024px)" srcset="./assets/images/dummyimg/fff&text=DummyImg+lg+1.png">
+                                <source media="(min-width: 768px)" srcset="./assets/images/dummyimg/fff&text=DummyImg+md+1.png">
+                                <img src="./assets/images/dummyimg/fff&text=DummyImg+sm+1.png" alt="Slide 1" class="w-full h-full object-cover" width="600" height="400">
                             </picture>
                             <!-- Text Content -->
                             <div class="relative z-20 flex flex-col items-start justify-center text-left px-10 md:px-16 h-full">
@@ -252,9 +257,9 @@
                         <!-- Slide 2 -->
                         <div class="hero-slide w-full h-full flex-shrink-0 snap-start relative">
                             <picture class="absolute top-0 left-0 w-full h-full z-10">
-                                <source type="image/webp" media="(min-width: 1024px)" srcset="https://dummyimage.com/1200x800/cccccc/fff&text=DummyImg+lg+2">
-                                <source type="image/webp" media="(min-width: 768px)" srcset="https://dummyimage.com/800x533/cccccc/fff&text=DummyImg+md+2">
-                                <img src="https://dummyimage.com/600x400/cccccc/fff&text=DummyImg+sm+2" alt="Slide 2" class="w-full h-full object-cover"  loading="lazy" width="600" height="400">
+                                <source  media="(min-width: 1024px)" srcset="./assets/images/dummyimg/fff&text=DummyImg+lg+2.png">
+                                <source media="(min-width: 768px)" srcset="./assets/images/dummyimg/fff&text=DummyImg+md+2.png">
+                                <img src="./assets/images/dummyimg/fff&text=DummyImg+sm+2.png" alt="Slide 2" class="w-full h-full object-cover" loading="lazy" width="600" height="400">
                             </picture>
                             <!-- Text Content -->
                             <div class="relative z-20 flex flex-col items-start justify-center text-left px-10 md:px-16 h-full">
@@ -270,9 +275,9 @@
                         <!-- Slide 3 -->
                         <div class="hero-slide w-full h-full flex-shrink-0 snap-start relative">
                             <picture class="absolute top-0 left-0 w-full h-full z-10">
-                                <source type="image/webp" media="(min-width: 1024px)" srcset="https://dummyimage.com/1200x800/c4c4c4/fff&text=DummyImg+lg+3">
-                                <source type="image/webp" media="(min-width: 768px)" srcset="https://dummyimage.com/800x533/c4c4c4/fff&text=DummyImg+md+3">
-                                <img src="https://dummyimage.com/600x400/c4c4c4/fff&text=DummyImg+sm+3" alt="Slide 3" class="w-full h-full object-cover"  loading="lazy" width="600" height="400">
+                                <source media="(min-width: 1024px)" srcset="./assets/images/dummyimg/fff&text=DummyImg+lg+3.png">
+                                <source media="(min-width: 768px)" srcset="./assets/images/dummyimg/fff&text=DummyImg+md+3.png">
+                                <img src="./assets/images/dummyimg/fff&text=DummyImg+sm+3.png" alt="Slide 3" class="w-full h-full object-cover" loading="lazy" width="600" height="400">
                             </picture>
                             <!-- Text Content -->
                             <div class="relative z-20 flex flex-col items-start justify-center text-left px-10 md:px-16 h-full">
@@ -287,8 +292,8 @@
                     </div>
 
                     <!-- Navigation Buttons -->
-                    <button id="hero-prev" class="hero-btn absolute cursor-pointer top-1/2 left-4 transform -translate-y-1/2 text-blue-800 p-3 rounded-full font-bold text-xl z-50">❮</button>
-                    <button id="hero-next" class="hero-btn absolute cursor-pointer top-1/2 right-4 transform -translate-y-1/2 text-blue-800 p-3 rounded-full font-bold text-xl z-50">❯</button>
+                    <button id="hero-prev" class="hero-btn absolute cursor-pointer top-1/2 left-4 transform -translate-y-1/2 text-blue-800 p-3 rounded-full font-bold text-xl z-50">❯</button>
+                    <button id="hero-next" class="hero-btn absolute cursor-pointer top-1/2 right-4 transform -translate-y-1/2 text-blue-800 p-3 rounded-full font-bold text-xl z-50">❮</button>
 
                     <!-- Pagination Dots -->
                     <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">

@@ -9,7 +9,6 @@ function createCard() {
     const cardContent = `
         <div class="bg-white shadow w-full sm:w-60 p-6 relative z-10 ">
             <div class="bg-gray-300 h-20 w-20 mb-4"></div>
-            <img loading="lazy" src="https://via.placeholder.com/80" alt="Image" class="mb-4 rounded">
             <h3 class="text-lg font-semibold text-gray-900">Lorem Ipsum Is Simply Dummy</h3>
             <p class="text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing.</p>
             <button class="mt-6 bg-gray-100 cursor-pointer text-gray-900 hover:bg-blue-900 hover:text-white p-3 rounded-full">
