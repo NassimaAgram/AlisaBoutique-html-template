@@ -26,7 +26,7 @@ function createCard(language = 'en') {
 
     // Create and return the card element
     const card = document.createElement("div");
-    card.classList.add("relative", "flex", "w-full");
+    card.classList.add("card", "relative", "flex", "w-full");
     card.innerHTML = cardContent;
     return card;
 }
@@ -50,7 +50,7 @@ document.getElementById("load-more").addEventListener("click", function () {
 // Event delegation for dynamically added delete buttons
 document.getElementById("card-container").addEventListener("click", function (event) {
     if (event.target.classList.contains("delete-btn")) {
-        const cardToDelete = event.target.closest(".relative.flex.w-full");
+        const cardToDelete = event.target.closest(".card");
         if (cardToDelete) {
             cardToDelete.remove();
         }
